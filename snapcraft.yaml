@@ -8,9 +8,17 @@ source-code: https://github.com/Soupolait/eyedropper-snap
 
 base: core24
 version: "2.1.0"
-summary: Simple color picker
+summary: Pick and format colors.
 description: |
-  Eyedropper is a simple and modern color picker for GNOME.
+  Features :
+
+  * Pick a Color
+  * Enter a color in Hex-Format
+  * Parse RGB/RGBA/ARGB Hex-Colors
+  * View colors in formats
+  * Customize which formats appear as well as their order
+  * Generate a palette of different shades
+
 
 grade: stable
 confinement: strict
@@ -25,6 +33,7 @@ apps:
   eyedropper:
     extensions: [gnome]
     command: usr/bin/eyedropper
+    slots: [eyedropper]
     desktop: usr/share/applications/com.github.finefindus.eyedropper.desktop
     common-id: com.github.finefindus.eyedropper
     plugs:
@@ -48,9 +57,6 @@ parts:
       - ninja-build
       - pkg-config
       - libadwaita-1-dev
-    stage-packages:
-      - glib-networking
-      - libproxy1v5
     build-environment:
       - PATH: "/root/.cargo/bin:$PATH"
     
