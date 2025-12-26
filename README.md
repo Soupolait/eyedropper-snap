@@ -3,6 +3,10 @@
 
 ![Eyedropper](data/icons/com.github.finefindus.eyedropper.svg)
 
+/!\ This repo is a fork of Finefindus with the only purpose of adding a snap version of the app. Any modifications you wish to make have to be made on Finfindus's repo.
+However, issues you encounter with specifically the snap package should be reported here.
+Thanks
+
 # Eyedropper
 
 Pick and format colors.
